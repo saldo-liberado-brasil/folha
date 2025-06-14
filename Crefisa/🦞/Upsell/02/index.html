@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crefisa - Pagamento de Taxa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.appmax.com.br/css/withoutboostrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.appmax.com.br/js/jquery-confirm.min.css">
+<script src="https://cdn.appmax.com.br/js/one-click-upsell.min.js"></script>
+<script src="https://cdn.appmax.com.br/js/jquery-confirm.min.js"></script>
+<script type="text/javascript">
+
+const TOKEN = "FnvSeydMq4QkzWOxBKbMmWqdYW8Zrc08BALj8SKk";
+</script>    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            ATENÇÃO: CASO NÃO SAQUE O DINHEIRO DE IMEDIATO, ELE SERÁ ENVIADO PARA OUTRA PESSOA QUE ESTA NA FILA DE ESPERA E PERDERÁ 100% DO SALDO!
+        </div>
+        <div class="content">
+            <h1>PARABÉNS</h1>
+            <p>Quase recebendo o pix</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 94%;"></div>
+                <span style="color: #FFFFFF;">94%</span>
+
+            </div>
+            <p>Sua vaga está garantida! Temos uma taxa de segurança no valor de <strong>R$ 48,72</strong> para realizarmos a transferência.</p>
+            <p>Após o pagamento, o link para download será enviado automaticamente via WhatsApp e e-mail.</p>
+            <button onclick="redirectToPayment()" class="btn btn-lg btn-block btn-outline-primary btn-upsell" data-bundle="15991665">PAGAR A TAXA E ACESSAR O APP</button>
+            <div class="faq">
+                <h2>Dúvidas Frequentes</h2>
+                <p><strong>Por que devo pagar essa taxa?</strong> Essa taxa deve ser paga <strong>HOJE</strong> para que possamos liberar o acesso e manter a sua segurança em dia, além de outros custos para usuários e manutenção do nosso forum.</p>
+                <p>Caso não consiga pagar a taxa hoje, você perderá sua vaga. <strong>NÃO Reembolsável</strong></p>
+            </div>
+        </div>
+    </div>
+        <script>
+        function redirectToPayment() {
+            window.location.href = 'https://pay.compragarantidaaqui.com/checkout/6f2c2f95-af60-42ec-bcc4-7cffd01c1027?src= | 🦞 | [Lagosta]'; // Substitua pela URL desejada
+        }
+    </script>
+</body>
+</html>
